@@ -1,0 +1,21 @@
+﻿
+/*.well{
+    background-color :darkgrey !important;
+}*/
+
+#itemEmployee {
+    font-size: 13px;
+    color: gray;
+}
+
+#errormessage{
+    color:darkred;
+}
+
+#createEmployeeItem {
+    text-align: center;
+}
+
+.roomwell{
+    background-color:lightskyblue !important;
+}

@@ -1,0 +1,33 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h3 class="text-center"> Hostel Quetzal </h3>
+    <div class="col-lg-4">
+
+    </div>
+    <div class="col-lg-4">
+        <div class="well well-lg">
+            <ul class="list-group">
+
+
+                <li class="list-group"> <a asp-action="index" role="button" class=" btn btn-info" asp-controller="Hostel">Hostel info</a></li>
+                <li class="list-group"> <a asp-action="index" role="button" class=" btn btn-info" asp-controller="Employee"> Employees</a></li>
+                <li class="list-group"><a asp-action="index" role="button" class=" btn btn-info" asp-controller="Rooms"> Rooms</a></li>
+
+                
+
+                <li class="list-group"><a asp-action="index" role="button" class=" btn btn-info" asp-controller="Customer">Customer Information</a></li>
+
+            </ul>
+
+
+        </div>
+    </div>
+
+</div>
+

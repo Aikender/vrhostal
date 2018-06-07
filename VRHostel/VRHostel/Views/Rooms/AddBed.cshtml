@@ -1,0 +1,29 @@
+﻿
+@model VRHostel.Models.MVCViewModels.RoomViewModel.RoomViewData
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Booking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddBed</h2>
+
+
+
+
+
+
+<div class="well well-lg">
+
+    <form asp-action="InsertBed" asp-controller="Rooms">
+
+        <label>RoomId</label>:<input type="text" asp-for="RoomId" />
+
+        <label>Bed Type</label>:<input type="text" asp-for="BedType" />
+        <label>Bed Number</label>:<input type="text" asp-for="BedNumber" />
+        <label>Bottem_top</label>:<input type="text" asp-for="Bottem_top" />
+
+        <button type="submit">Add Bed</button>
+
+    </form>
+</div>

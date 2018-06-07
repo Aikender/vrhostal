@@ -1,0 +1,25 @@
+﻿@model IEnumerable<VRHostel.Models.MVCViewModels.CustomerViewModel.CustomerIndexViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Customer Information</h2>
+<div >
+    @foreach (var customer in Model)
+    {
+    <div class="well well-lg">
+        <label>First Name:</label><label id="itemEmployee">@customer.FirstName</label> <br />
+        <label>Last Name:</label><label id="itemEmployee">@customer.LastName</label> <br />
+        @customer.CustomerId 
+        <a asp-action="CustomerDetails" class="btn btn-success" role="button" asp-controller="Customer" asp-route-CustomerId="@customer.CustomerId">Customer Information</a>
+        <a asp-action="Booking" class="btn btn-info" role="button" asp-controller="Customer" asp-route-CustomerId="@customer.CustomerId">Customer Bookings</a><br />
+        <a asp-action="CustomerDetails" class="btn btn-danger" role="button" asp-controller="Customer" asp-route-RoomId="">Delete Customer</a>
+
+    </div>
+    }
+
+</div>

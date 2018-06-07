@@ -1,0 +1,107 @@
+﻿@model IEnumerable<VRHostel.Models.MVCViewModels.EmployeeViewModel.EmployeeIndexView>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Hostel Employees</h2>
+
+<div>
+    <a asp-action="CreateEmployee" class="btn btn-primary" asp-controller="Employee">Add New Employee</a>
+    @foreach (var employee in Model)
+    {
+        <div class="well well-lg ">
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>First Name:</label><label id="itemEmployee">@employee.FirstName</label> <br />
+                    <label>Gender:</label><label id="itemEmployee">@employee.Gender</label>
+                </div>
+                <div class="col-sm-3">
+                    <label>Last Name :</label><label id="itemEmployee">@employee.LastName</label><br />
+                    <label>Date of Birth :</label><label id="itemEmployee">@Convert.ToString(string.Format("{0:dd/MM/yyyy}",employee.DateOfBirth))</label>
+                </div>
+                <div class="col-sm-4">
+                    <label>PassportNumber :</label><label id="itemEmployee">@employee.PassportNumber</label><br />
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <label>Email :</label><label>@employee.Email</label>
+                </div>
+                <div class="col-sm-3">
+                    <label>CellPhone :</label><label id="itemEmployee">@employee.CellPhone</label><br />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Country :</label><label id="itemEmployee">@employee.Country</label>
+
+                </div>
+                <div class="col-sm-2">
+                    <label>State :</label><label>@employee.State</label><br />
+
+                </div>
+                <div class="col-sm-2">
+                    <label>City :</label><label>@employee.City</label>
+
+                </div>
+                <div class="col-sm-3">
+                    <label>Postalcode :</label><label>@employee.Postalcode</label><br />
+
+
+                </div>
+                <div class="col-sm-3">
+                    <label>Street :</label><label>@employee.Street</label>
+
+                </div>
+                <div class="col-sm-2">
+                    <label>Number :</label><label>@employee.Number</label><br />
+
+                </div>
+                <div class="col-sm-2">
+
+                    <label>Buss :</label><label>@employee.Buss</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+
+
+                    <label>Username :</label><label>@employee.Username</label>
+                </div>
+                <div class="col-sm-3">
+                    <label>Password:</label><label>@employee.Password</label><br />
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <a asp-action="editEmployee" class="btn btn-success" asp-controller="Employee" asp-route-employeeId="@employee.EmployeeId" s>edit Information</a>
+                </div>
+                <div class="col-lg-3">
+                    <a asp-action="deleteEmployee" class="btn btn-danger" asp-controller="Employee" asp-route-employeeId="@employee.EmployeeId" s>Delete Employee</a>
+                </div>
+            </div>
+
+           
+        </div>
+
+    }
+</div>
+
+
+
+
+

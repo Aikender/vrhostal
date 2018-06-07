@@ -1,0 +1,66 @@
+﻿@model VRHostel.Models.MVCViewModels.HostelviewModels.HostelIndexView
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "UpdateHostel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UpdateHostel</h2>
+
+<form class="form-horizontal" asp-action="Update" asp-controller="Hostel">
+    <div class="well well-lg">
+
+
+        <div class="form-group">
+            <lable hidden>Hostel id</lable>:<input type="text" asp-for="HostelId" hidden /><br />
+
+
+        </div>
+        <div class="form-group">
+            <lable>Hostel Name</lable>:<input type="text" asp-for="HostelName" /><br />
+
+            <span id="errormessage" asp-validation-for="HostelName"></span>
+
+
+        </div>
+
+        <div class="form-group">
+            <lable>Country</lable>:<input type="text" asp-for="Country" /><br />
+
+        </div>
+        <div class="form-group">
+
+            <lable>PostalCode</lable>:<input type="text" asp-for="Postalcode" /><br />
+        </div>
+        <div class="form-group">
+
+            <lable>City</lable>:<input type="text" asp-for="City" /><br />
+        </div>
+        <div class="form-group">
+
+            <lable>Street</lable>:<input type="text" asp-for="Street" /><br />
+        </div>
+        <div class="form-group">
+
+            <lable>Phone Number</lable>:<input type="text" asp-for="Number" /><br />
+        </div>
+        <div class="form-group">
+
+
+
+            <lable>Email</lable>:<input type="text" asp-for="Email" />
+        </div>
+
+        <div class="form-group">
+
+            <lable>Phone Number</lable>:<input type="text" asp-for="PhoneNumber" /><br />
+
+        </div>
+
+
+        <button class="btn-success" type="submit">change Hostel information</button>
+
+
+    </div>
+
+</form>

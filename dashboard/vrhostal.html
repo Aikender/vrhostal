@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/aframe.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+    <a-scene id="ascene">
+        <a-assets >
+          <a-asset-item id="o" src="model/basicfirstfloor.obj"></a-asset-item>
+            <a-asset-item id="m" src="model/basicfirstfloor.mtl"></a-asset-item>
+            <a-asset-item id="w" src="model/blwindow.obj"></a-asset-item>
+            <a-asset-item id="wi" src="model/blwindow.mtl"></a-asset-item>
+            <a-asset-item id="terw" src="model/terracewindow.obj"></a-asset-item>
+            <a-asset-item id="terwmtl" src="model/terracewindow.mtl"></a-asset-item>
+            <a-asset-item id="bdlftw" src="model/bowdleftw.obj"></a-asset-item>
+            <a-asset-item id="bdlftwmtl" src="model/bowdleftw.mtl"></a-asset-item>
+            <a-asset-item id="bowfrw" src="model/bowfrontw.obj"></a-asset-item>
+            <a-asset-item id="bowfrwmtl" src="model/bowfrontw.mtl"></a-asset-item>
+            <a-asset-item id="bowfrrw" src="model/bowfrontrw.obj"></a-asset-item>
+            <a-asset-item id="bowfrrwmtl" src="model/bowfrontrw.mtl"></a-asset-item>
+            <a-asset-item id="dormtw" src="model/dormtwindow.obj"></a-asset-item>
+            <a-asset-item id="dormtwmtl" src="model/dormtwindow.mtl"></a-asset-item>
+            <a-asset-item id="dormframew" src="model/dormframew.obj"></a-asset-item>
+            <a-asset-item id="dormframewmtl" src="model/dormframew.mtl"></a-asset-item>
+            <a-asset-item id="secfl" src="model/secondfloor.obj"></a-asset-item>
+            <a-asset-item id="secflmtl" src="model/secondfloor.mtl"></a-asset-item>
+
+
+        </a-assets>
+        <a-obj-model src="#o" mtl="#m" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#w" mtl="#wi" position="0 0 0.05" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#w" mtl="#wi" position="-2 0 0.05" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#terw" mtl="#terwmtl" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#bdlftw" mtl="#bdlftwmtl" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#bowfrw" mtl="#bowfrwmtl" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#bowfrrw" mtl="#bowfrrwmtl" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#dormtw" mtl="#dormtwmtl" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#dormtw" mtl="#dormtwmtl" position="0 0 -3.812" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#dormframew" mtl="#dormframewmtl" position="0.7 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#dormframew" mtl="#dormframewmtl" position="0.7 0 -3.812" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-obj-model src="#secfl" mtl="#secflmtl" position="0 0 0" scale="0.01 0.01 0.01"></a-obj-model>
+        <a-sky color="#ECECEC"></a-sky>
+
+        <a-entity id="teleHand" hand-controls="left" teleport-controls=s="type: parabolic; collisionEntities: [mixin='voxel'], #ground"></a-entity>
+        <a-entity hand-controls="right" controller-cursor="radius :0.001">
+            <a-entity raycaster="objects: .collidable; showLine: true; far: 100"line="color: orange; opacity: 0.5" position="0 -0.9 0" rotation="90"></a-entity>
+        </a-entity>
+      
+
+        <a-box position="2 0 0" color="red" rotation="0 45 45" scale="1 1 1">
+            <a-animation attribute="position" to="0 4 -4.5" direction="alternate" dur="2000" begin="click"  repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box id="screen" color="black" width="2.2" height="1.6" depth="0.05" position="6 1.4 -3.2">
+           
+        </a-box>
+ 
+        <a-camera position="6 2 0">
+            <a-cursor color="#FF0000" ></a-cursor>
+          </a-camera>
+        
+    </a-scene>
+    <script src="js/Textfieldt.js" type="text/javascript"></script>
+    <script src='js/ajax.js'></script>
+    <script src="js/guiform.js" type="text/javascript"></script> 
+    <script src="js/Gkeyboard.js" type="text/javascript"></script>
+    <g-keyboard letterkey="65" outputtarget="alles of niets" id="qi" keyboardscale="0.05 0.05 0.05" position="6 1.0 -4" rotation ="-45 180 0">
+</body>
+
+</html>

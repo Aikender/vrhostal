@@ -1,0 +1,68 @@
+﻿@model IEnumerable<VRHostel.Models.MVCViewModels.RoomViewModel.RoomViewData>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hostel Rooms</h2><a asp-action="CreateRoom" class="btn btn-success" role="button" asp-controller="Rooms">Add New Room</a>
+                     <div class="well well-lg">
+
+                         @foreach (var room in Model)
+    {
+
+                     <div class="row">
+                         <div class="col-lg-3">
+
+                             <div class="roomwell well-lg">
+
+                                 <label hidden>Room Id : </label><label hidden>@room.RoomId</label><br />
+                                 <label>Room Name : </label><label>@room.RoomName</label><br />
+                                 <label>Room Type : </label><label>@room.RoomType</label><br />
+                                 <label>Room Number : </label><label>@room.RoomNumber</label><br />
+                                 <label>Room roomprice : </label><label>@room.RoomPrice</label><br />
+
+                             </div>
+
+                         </div>
+                     </div>
+
+
+foreach (var bed in room.Bedlist)
+{
+                     <div class="well-sm">
+                         <div class="row">
+                             <div class="col-lg-2">
+                                 <label>Nr Bed : </label><label>@bed.BedNumber</label>
+
+                             </div>
+                             <div class="col-lg-2">
+
+                                 <label> bed Type:  </label><label>@bed.BedType</label>
+                             </div>
+                             <div class="col-lg-2">
+                                 <label> Bottem or Top :  </label><label>@bed.Bottem_top</label>
+
+                             </div>
+                             <div class="col-lg-1">
+
+                             </div>
+                             <div class="col-lg-1">
+
+                                 <a asp-action="DeleteBed" class="btn btn-warning" role="button" asp-controller="Rooms" asp-route-BedId="@bed.BedId">Delete Bed</a>
+                             </div>
+                         </div>
+                     </div>
+
+
+}
+
+
+                     <a asp-action="AddBed" class="btn btn-success" role="button" asp-controller="Rooms" asp-route-RoomId="@room.RoomId">Add Bed</a>
+
+
+}
+                       
+                     </div>
+  

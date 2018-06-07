@@ -1,0 +1,11 @@
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\bin\Debug\netcoreapp2.0\VRHostel.deps.json
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\bin\Debug\netcoreapp2.0\VRHostel.runtimeconfig.json
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\bin\Debug\netcoreapp2.0\VRHostel.runtimeconfig.dev.json
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\bin\Debug\netcoreapp2.0\VRHostel.dll
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\obj\Debug\netcoreapp2.0\VRHostel.csprojResolveAssemblyReference.cache
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\obj\Debug\netcoreapp2.0\VRHostel.csproj.CoreCompileInputs.cache
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\obj\Debug\netcoreapp2.0\VRHostel.AssemblyInfoInputs.cache
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\obj\Debug\netcoreapp2.0\VRHostel.AssemblyInfo.cs
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\bin\Debug\netcoreapp2.0\VRHostel.pdb
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\obj\Debug\netcoreapp2.0\VRHostel.dll
+C:\Users\davy\Documents\VRHostel\VRHostel\VRHostel\obj\Debug\netcoreapp2.0\VRHostel.pdb

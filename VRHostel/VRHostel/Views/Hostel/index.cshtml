@@ -1,0 +1,26 @@
+﻿@model VRHostel.Models.MVCViewModels.HostelviewModels.HostelIndexView
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="">
+    <h3>Hostel Information</h3>
+    <div class="well well-lg">
+        <lable>Hostel Name</lable>:<label>@Model.HostelName</label><br />
+        <lable>Country</lable>:<label>@Model.Country</label><br />
+        <lable>PostalCode</lable>:<label>@Model.Postalcode</label><br />
+        <lable>City </lable>:<label>@Model.City</label><br />
+        <lable>Street</lable>:<label>@Model.Street</label><br />
+        <lable>Number</lable>:<label>@Model.Number</label><br />
+        <lable>Phone Number</lable>:<label>@Model.PhoneNumber</label><br />
+        <lable>Email</lable>:<label>@Model.Email</label><br />
+    </div>
+
+    <a asp-action="UpdateHostel" class="btn btn-info" asp-controller="Hostel" asp-route-HostelId="@Model.HostelId" s>edit Information</a>
+
+
+</div>

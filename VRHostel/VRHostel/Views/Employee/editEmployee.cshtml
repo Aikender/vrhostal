@@ -1,0 +1,180 @@
+﻿@model VRHostel.Models.MVCViewModels.EmployeeViewModel.EmployeeIndexView
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h2>editEmployee</h2>
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class=" well well-lg">
+
+    <form class="form-horizontal" asp-action="UpdateEmployee" asp-controller="Employee">
+
+        <label asp-for="EmployeeId"></label>
+        <input class="form-control" asp-for="EmployeeId" type="text" />
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="FirstName">First Name</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="FirstName" type="text" />
+            </div>
+
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="FirstName"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="LastName">Last Name</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="LastName" type="text" />
+            </div>
+
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="LastName"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="DateOfBirth">Date Of Birth</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="DateOfBirth" type="date" />
+            </div>
+
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="DateOfBirth"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Gender">Gender</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Gender" type="text" />
+            </div>
+
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Gender"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="PassportNumber">PasportNumber</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="PassportNumber" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="PassportNumber"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Email">Email</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Email" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Email"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="CellPhone">Phone Number</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="CellPhone" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="CellPhone"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Country">Country</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Country" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Country"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="State">state</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="State" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="State"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="City">City</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="City" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="City"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Street">Street</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Street" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Street"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Number">Number</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Number" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Number"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Buss">Buss</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Buss" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Buss"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Postalcode">PostalCode</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Postalcode" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Postalcode"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Username">Username</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Username" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Username"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" id="createEmployeeItem" asp-for="Password">Password</label>
+            <div class="col-sm-5">
+                <input class="form-control" asp-for="Password" type="text" />
+            </div>
+            <div class="col-sm-5">
+                <span id="errormessage" asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <button class="btn-success" type="submit">change Employee Information</button>
+
+    </form>
+</div>

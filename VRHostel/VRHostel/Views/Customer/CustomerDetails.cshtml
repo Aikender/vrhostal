@@ -1,0 +1,35 @@
+﻿@model VRHostel.Models.MVCViewModels.CustomerViewModel.CustomerDeatailsView
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "CustomerDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Information</h2>
+
+
+<div class="container">
+    <div class="well well-lg">
+
+        <label>First Name :</label><label>@Model.FirstName</label> <br />
+        <label>Last Name :</label><label id="itemEmployee">@Model.LastName</label> <br />
+        <label>Date Of Birth :</label><label id="itemEmployee">@Model.LastName</label><br />
+        <label>Gender :</label><label id="itemEmployee">@Model.Gender</label><br />
+        <label>Email :</label><label id="itemEmployee">@Model.Email</label><br />
+        <label>Phone :</label><label id="itemEmployee">@Model.CellPhone</label><br />
+        <label>Passport Number :</label><label id="itemEmployee">@Model.PassportNumber</label><br />
+        <label>Country :</label><label id="itemEmployee">@Model.Country</label><br />
+        <label>State :</label><label id="itemEmployee">@Model.State</label><br />
+        <label>Street :</label><label id="itemEmployee">@Model.City</label><br />
+        <label>Street :</label><label id="itemEmployee">@Model.Street</label><br />
+        <label>Number :</label><label id="itemEmployee">@Model.Number</label><br />
+        <label>Buss :</label><label id="itemEmployee">@Model.Buss</label>
+
+    </div>
+</div>
+
+
+
+
+
